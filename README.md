@@ -49,10 +49,24 @@ forge snapshot
 anvil
 ```
 
+### Use encrypted private key
+
+It is recommended to run this in a separate terminal window.
+
+```shell
+cast wallet import anvilPrivateKey0 --interactive
+```
+
 ### Deploy
 
 ```shell
-forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url <your_rpc_url> --broadcast --private-key <your_private_key>
+forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url $RPC_URL --account anvilPrivateKey0 --sender $PUBLIC_KEY --broadcast -vvvv
+```
+
+### Deploy with private key
+
+```shell
+forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
 ```
 
 ### Cast
