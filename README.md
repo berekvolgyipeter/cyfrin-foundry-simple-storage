@@ -52,7 +52,7 @@ anvil
 ### Deploy
 
 ```shell
-forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url <your_rpc_url> --broadcast --private-key <your_private_key>
 ```
 
 ### Cast
