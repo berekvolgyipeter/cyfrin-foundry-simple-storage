@@ -63,6 +63,12 @@ cast wallet import anvilPrivateKey0 --interactive
 forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url $RPC_URL --account anvilPrivateKey0 --sender $PUBLIC_KEY --broadcast -vvvv
 ```
 
+or without defining a PUBLIC_KEY env var:
+
+```shell
+forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url $RPC_URL --account anvilPrivateKey0 --sender $(cast wallet address --account anvilPrivateKey0) --broadcast -vvvv
+```
+
 ### Deploy with private key
 
 ```shell
