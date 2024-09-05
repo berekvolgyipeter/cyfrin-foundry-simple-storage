@@ -43,7 +43,7 @@ forge fmt
 forge snapshot
 ```
 
-### Anvil
+### Anvil (run a local test network)
 
 ```shell
 anvil
@@ -75,10 +75,14 @@ forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url $RPC
 forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
 ```
 
-### Cast
+### Interact with contract
 
 ```shell
-cast <subcommand>
+cast send <contract address> "store(uint256)" 1234 --rpc-url $RPC_URL --account anvilPrivateKey0
+```
+
+```shell
+cast call <contract address> "retrieve()"
 ```
 
 ### Help
