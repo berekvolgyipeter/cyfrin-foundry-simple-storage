@@ -92,3 +92,33 @@ forge --help
 anvil --help
 cast --help
 ```
+
+### foundry-zksync
+
+Install:
+
+```shell
+git clone git@github.com:matter-labs/foundry-zksync.git
+cd foundry-zksync
+./install-foundry-zksync
+```
+
+Once installed, we can run
+
+```shell
+foundryup-zksync
+```
+
+or
+
+```shell
+foundryup
+```
+
+to quickly setup the foundry we want to use.
+
+To build on zksync, make sure, the zksync foundry is used and then run:
+
+```shell
+forge build --zksync
+```
